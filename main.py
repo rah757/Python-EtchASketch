@@ -4,16 +4,22 @@ carl = Turtle()
 screen = Screen()
 
 
-def f():
+def forward():
     carl.fd(10)
-def r():
+def right():
     carl.rt(10)
-def b():
+def back():
     carl.back(10)
-def l():
+def left():
     carl.lt(10)
+def clear():
+    carl.reset()
 
 
 screen.listen()
-screen.onkey(key="space", fun=f)
+screen.onkey(key="w", fun=forward)
+screen.onkey(key="s", fun=back)
+screen.onkey(key="a", fun=left)
+screen.onkey(key="d", fun=right)
+screen.onkey(key="Escape", fun=clear)
 screen.exitonclick()
