@@ -1,13 +1,19 @@
 from turtle import Turtle, Screen
 
-tim = Turtle()
+carl = Turtle()
 screen = Screen()
 
 
-def move_forwards():
-    tim.forward(10)
+def f():
+    carl.fd(10)
+def r():
+    carl.rt(10)
+def b():
+    carl.back(10)
+def l():
+    carl.lt(10)
 
 
 screen.listen()
-screen.onkey(key="space", fun=move_forwards)
+screen.onkey(key="space", fun=f)
 screen.exitonclick()
